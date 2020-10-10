@@ -1,0 +1,165 @@
+@font-face {
+  font-family: CenturyGothic;
+  src: url("fonts/Century_Gothic.ttf");
+}
+
+body.body-style
+{
+  font-family: CenturyGothic;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-style
+{
+  width: 300px;
+  height: 100vh;
+  background-color: #ff0036;
+  float: left;
+
+}
+
+.middlerow-style
+{
+  float: left;
+  padding:  1vh;
+  background-color: #ebebeb;
+}
+
+.middlerow-top
+{
+  height: 20vh;
+  width: 100vh;
+  background-color: #ebebeb;
+}
+
+.middlerow-bottom
+{
+  margin-top: 1vh;
+  height: 77vh;
+  width: 100vh;
+  background-color: #ebebeb;
+}
+
+.rightbar-style
+{
+  width: 300px;
+  height: 100vh;
+  background-color: #ebebeb;
+  float: right;
+}
+
+.rightbar-topbox
+{
+  width: 99%;
+  height: 48.5vh;
+  margin-top: 1vh;
+  margin-bottom: 0.5vh;
+  background-color: #e2dede;
+  padding: 2vh;
+
+}
+
+.rightbar-bottombox
+{
+  width: 99%;
+  height: 48.5vh;
+  margin-top: 0.5vh;
+  margin-bottom: 1vh;
+  background-color: #e2dede;
+  padding: 2vh;
+
+}
+
+.ProfilePic-style
+{
+  margin: auto;
+  margin-top: 50px;
+  background-color: #e2dede;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.Username-style
+{
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.menu-style
+{
+  margin-top: 30vh  ;
+  margin-left: 25px;
+}
+
+.menu-item
+{
+  margin: 0 auto;
+  text-align: left !important;
+  width: 250px !important;
+  height: 50px;
+  background-color: #ff0036 !important;
+  border: none !important;
+  padding-left: 50px !important;
+}
+
+.menu-item:hover
+{
+  margin: 0 auto;
+  text-align: left !important;
+  width: 250px !important;
+  height: 50px;
+  background-color: #e00030 !important;
+  border: none !important;
+  padding-left: 50px;
+}
+
+.head-style
+{
+  height: 50px;
+  background-color: #e2dede;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.head-text-style
+{
+  padding-top: 7px;
+}
+
+.story-style
+{
+  margin-left: 2vh;
+  margin-right: 2vh;
+  margin-top: 2vh;
+  height: 20vh;
+  width: 15vh;
+  float: left;
+}
+
+.story-image-style
+{
+  width: 100;
+  height: 75%;
+  background-color: #ff0036;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.story-text-style
+{
+  height: 25%;
+  width: 100%;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.postbox
+{
+  width: 20%;
+  height: auto;
+  float: left;
+  background-color: #e2dede;
+}

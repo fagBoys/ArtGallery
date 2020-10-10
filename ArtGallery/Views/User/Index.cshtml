@@ -1,16 +1,159 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{ 
+    Layout = null;
 }
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="~/style.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>  
-    <form>
-        <input type="text" placeholder="Username"/>
-        <input type="text" placeholder="Password"/>
-        <button>Login</button>
-    </form>
+<body class="body-style">
+
+    <nav class="sidebar-style">
+
+        <div class="ProfilePic-style">
+            <img src="~/img/user.png" width="150px" height="150px" style="margin:25px" alt="">
+        </div>
+
+        <div class="Username-style">
+            <h2>Full Name</h2>
+            <h6>User type</h6>
+        </div>
+
+
+        <div class="btn-group-vertical menu-style" role="group" aria-label="Vertical button group">
+            <button type="button" class="btn btn-danger menu-item">Home</button>
+            <button type="button" class="btn btn-danger menu-item">Profile</button>
+            <button type="button" class="btn btn-danger menu-item">Search</button>
+            <button type="button" class="btn btn-danger menu-item">Notification</button>
+            <button type="button" class="btn btn-danger menu-item">Setting</button>
+            <button type="button" class="btn btn-danger menu-item">Logout</button>
+        </div>
+
+    </nav>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-lg-10" style="padding:1vh;">
+
+                <div class="" style="background-color: #ebebeb; width:100%; height:30vh; margin: auto;">
+                    <div class="head-style">
+                        <h3 class="head-text-style">Art gallery</h3>
+                    </div>
+                    <div class="story-style">
+                        <div class="story-image-style">
+                            <img width="90%" style="margin:5%;" src="~/img/user.png" alt="">
+                        </div>
+                        <div class="story-text-style">
+                            <h5>Full Name</h5>
+                        </div>
+                    </div>
+                    <div class="story-style">
+                        <div class="story-image-style">
+                            <img width="90%" style="margin:5%;" src="~/img/user.png" alt="">
+                        </div>
+                        <div class="story-text-style">
+                            <h5>Full Name</h5>
+                        </div>
+                    </div>
+                    <div class="story-style">
+                        <div class="story-image-style">
+                            <img width="90%" style="margin:5%;" src="~/img/user.png" alt="">
+                        </div>
+                        <div class="story-text-style">
+                            <h5>Full Name</h5>
+                        </div>
+                    </div>
+                    <div class="story-style">
+                        <div class="story-image-style">
+                            <img width="90%" style="margin:5%;" src="~/img/user.png" alt="">
+                        </div>
+                        <div class="story-text-style">
+                            <h5>Full Name</h5>
+                        </div>
+                    </div>
+                    <div class="story-style">
+                        <div class="story-image-style">
+                            <img width="90%" style="margin:5%;" src="~/img/user.png" alt="">
+                        </div>
+                        <div class="story-text-style">
+                            <h5>Full Name</h5>
+                        </div>
+                    </div>
+                    <div class="story-style">
+                        <div class="story-image-style">
+                            <img width="90%" style="margin:5%;" src="~/img/user.png" alt="">
+                        </div>
+                        <div class="story-text-style">
+                            <h5>Full Name</h5>
+                        </div>
+                    </div>
+                    <div class="story-style">
+                        <div class="story-image-style">
+                            <img width="90%" style="margin:5%;" src="~/img/user.png" alt="">
+                        </div>
+                        <div class="story-text-style">
+                            <h5>Full Name</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="" style="background-color: #ebebeb; width:100%; height:67vh; margin-top:1vh;">
+                    <div class="postbox">
+                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 rightbar-style">
+                <div class="rightbar-topbox">
+                    <h6>Advertisement</h6>
+                </div>
+                <div class="rightbar-bottombox">
+                    <h6>New event</h6>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 </html>

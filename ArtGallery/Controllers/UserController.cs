@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ArtGallery.Data;
 using ArtGallery.Models;
+using ArtGallery.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -19,7 +20,7 @@ namespace ArtGallery.Controllers
     {
         private IHostingEnvironment _environment;
 
-        private IRecaptchaService _recaptcha;
+        //private IRecaptchaService _recaptcha;
 
         private readonly UserManager<Account> _userManager;
 
@@ -27,11 +28,11 @@ namespace ArtGallery.Controllers
 
         private readonly ILogger _logger;
 
-        public UserController(IHostingEnvironment environment, IRecaptchaService recaptcha, UserManager<Account> userManager, SignInManager<Account> signInManager, ILogger<Account> logger)
+        public UserController(IHostingEnvironment environment, /*IRecaptchaService recaptcha,*/ UserManager<Account> userManager, SignInManager<Account> signInManager, ILogger<Account> logger)
         {
             _environment = environment;
 
-            _recaptcha = recaptcha;
+            //_recaptcha = recaptcha;
 
             _userManager = userManager;
 
@@ -79,7 +80,7 @@ namespace ArtGallery.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(/*اسم مدل ویو*/ model, string returnUrl = null)
+        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             
@@ -87,7 +88,7 @@ namespace ArtGallery.Controllers
             if (ModelState.IsValid)
             {
                
-                var user = new Account { UserName = model.Username, Email = model.Email, IsUser = true, FirstName = model.Firstname, LastName = model.Lastname, IsActive = false, IsAdmin = false, AdminType = false};
+                var user = new Account { UserName = model.Username, Email = model.Email, IsUser = true, FirstName = model.FirstName, LastName = model.LastName, IsActive = false, IsAdmin = false, AdminType = false};
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if(result.Succeeded)
@@ -118,7 +119,7 @@ namespace ArtGallery.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(/*اسم مدل ویو*/ model,string returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel model,string returnUrl = null)
         {
 
             ViewData["ReturnUrl"] = returnUrl;
@@ -127,18 +128,18 @@ namespace ArtGallery.Controllers
             {
                 ArtGalleryContext context = new ArtGalleryContext();
                 var result = await _signInManager.PasswordSignInAsync(model.Username,model.Password,model.RememberMe, lockoutOnFailure: false);
-                Account Account = await context.Account.Where(A=>A.UserName == model.Username).FirstOrDefaultAsync();
+                Account Account = context.Account.Where(A=>A.UserName == model.Username).FirstOrDefault();
                 if(result.Succeeded && Account.IsUser && Account.IsActive)
                 {
                     
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction(nameof(/*اسم صفحه که قرار اجرا  بشه*/));
+                    return RedirectToAction(nameof(Index));
 
                 }
                 if(result.IsLockedOut)
                 {
                     _logger.LogWarning("User account locked out.");
-                    return RedirectToLocal(nameof(Lockout));
+                    //return RedirectToLocal(nameof(Lockout));
                 }
                 else
                 {

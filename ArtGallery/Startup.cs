@@ -38,13 +38,17 @@ namespace ArtGallery
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddControllersWithViews();
+
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+
             services.AddDbContext<ArtGalleryContext>(Options => Options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<Account, IdentityRole>().AddEntityFrameworkStores<ArtGalleryContext>().AddDefaultTokenProviders();
 
-            services.AddControllersWithViews();
 
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

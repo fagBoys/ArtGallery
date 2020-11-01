@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ArtGallery.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ArtGallery.Controllers
 {
@@ -32,6 +33,18 @@ namespace ArtGallery.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        public IActionResult AddPost()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddPost(Model model)
+        {
+            return View();
         }
     }
 }

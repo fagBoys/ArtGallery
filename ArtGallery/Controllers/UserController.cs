@@ -57,7 +57,7 @@ namespace ArtGallery.Controllers
             }
             else
             {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
+                return RedirectToAction(nameof(UserController.Index), "Home");
             }
         }
 
@@ -80,7 +80,7 @@ namespace ArtGallery.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = "Login")
         {
             ViewData["ReturnUrl"] = returnUrl;
             
@@ -119,7 +119,7 @@ namespace ArtGallery.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model,string returnUrl = null)
+        public async Task<IActionResult> Login(LoginViewModel model,string returnUrl = "Index")
         {
 
             ViewData["ReturnUrl"] = returnUrl;
@@ -133,7 +133,7 @@ namespace ArtGallery.Controllers
                 {
                     
                     _logger.LogInformation("User logged in.");
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToLocal(returnUrl);
 
                 }
                 if(result.IsLockedOut)
@@ -150,6 +150,18 @@ namespace ArtGallery.Controllers
 
             return View();
 
+        }
+
+        [HttpGet]
+        public IActionResult AddPost()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddPost(Post NewPost)
+        {
+            return View();
         }
 
     }

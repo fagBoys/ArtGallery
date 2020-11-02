@@ -35,16 +35,6 @@ namespace ArtGallery.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [HttpGet]
-        public IActionResult AddPost()
-        {
-            return View();
-        }
 
-        [HttpPost]
-        public IActionResult AddPost(Model model)
-        {
-            return View();
-        }
     }
 }

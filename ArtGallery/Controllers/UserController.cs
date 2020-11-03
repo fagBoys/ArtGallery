@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using ArtGallery.Data;
@@ -8,6 +9,7 @@ using ArtGallery.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -155,12 +157,30 @@ namespace ArtGallery.Controllers
         [HttpGet]
         public IActionResult AddPost()
         {
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddPost(Post NewPost)
+        public IActionResult AddPost(IFormFile file)
         {
+
+            // input image to database
+
+            ArtGalleryContext Context = new ArtGalleryContext();
+            Post postimage= new Post();
+            postimage.Date = DateTime.Now;
+            if (file.Length > 0)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    file.CopyTo(ms);
+                    var FileByte = ms.ToArray();
+                    postimage.PostImage = FileByte;
+                }
+            }
+            Context.Post.Add(postimage);
+            Context.SaveChangesAsync();
             return View();
         }
 

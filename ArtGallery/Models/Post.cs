@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 namespace ArtGallery.Models
 {
     public class Post
-
     {
         [Key]
         public int PostID { get; set; }
@@ -24,9 +23,5 @@ namespace ArtGallery.Models
         [Required]
         [MaxLength(50)]
         public DateTime Date { get; set; }
-
-       
-
-       
     }
 }

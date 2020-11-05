@@ -162,24 +162,25 @@ namespace ArtGallery.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddPost(IFormFile file)
+        public IActionResult AddPost(Post Post,IFormFile file)
         {
 
             // input image to database
 
             ArtGalleryContext Context = new ArtGalleryContext();
-            Post postimage= new Post();
-            postimage.Date = DateTime.Now;
+            Post NewPost= new Post();
+            NewPost.Date = DateTime.Now;
+            NewPost.Caption = Post.Caption;
             if (file.Length > 0)
             {
                 using (var ms = new MemoryStream())
                 {
                     file.CopyTo(ms);
                     var FileByte = ms.ToArray();
-                    postimage.PostImage = FileByte;
+                    NewPost.PostImage = FileByte;
                 }
             }
-            Context.Post.Add(postimage);
+            Context.Post.Add(NewPost);
             Context.SaveChangesAsync();
             return View();
         }

@@ -479,7 +479,6 @@ C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\obj\Debug\netcore
 C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\ArtGallery.pdb
 C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\ArtGallery.genruntimeconfig.cache
 C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\bin\Debug\netcoreapp3.1\System.Text.Json.dll
-C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\Razor\Controllers\Index.cshtml.g.cs
 C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
 C:\Users\Mohammad Javad\Documents\GitHub\ArtGallery\ArtGallery\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll

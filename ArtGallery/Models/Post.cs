@@ -13,7 +13,6 @@ namespace ArtGallery.Models
         public int PostID { get; set; }
 
         [Required]
-        [MaxLength(50)]
         public Byte[] PostImage { get; set; }
 
         [Required]

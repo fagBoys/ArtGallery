@@ -135,7 +135,7 @@ namespace ArtGallery.Controllers
                 {
                     
                     _logger.LogInformation("User logged in.");
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction(returnUrl);
 
                 }
                 if(result.IsLockedOut)
@@ -162,7 +162,7 @@ namespace ArtGallery.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddPost(Post Post,IFormFile file)
+        public IActionResult AddPost(AddPostViewModel Post)
         {
 
             // input image to database
@@ -171,11 +171,11 @@ namespace ArtGallery.Controllers
             Post NewPost= new Post();
             NewPost.Date = DateTime.Now;
             NewPost.Caption = Post.Caption;
-            if (file.Length > 0)
+            if (Post.PostImage.Length > 0)
             {
                 using (var ms = new MemoryStream())
                 {
-                    file.CopyTo(ms);
+                    Post.PostImage.CopyTo(ms);
                     var FileByte = ms.ToArray();
                     NewPost.PostImage = FileByte;
                 }

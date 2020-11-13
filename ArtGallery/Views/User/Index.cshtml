@@ -1,4 +1,5 @@
-﻿@{ 
+﻿@model IEnumerable<ArtGallery.Models.Post>
+@{ 
     Layout = null;
 }
 <!DOCTYPE html>
@@ -109,6 +110,33 @@
                 </div>
 
                 <div class="" style="background-color: #ebebeb; width:100%; height:67vh; margin-top:1vh;">
+                    @foreach(var item in Model)
+                    {
+
+                        var base64 = Convert.ToBase64String(item.PostImage);
+                        var image = string.Format("data:image/jpg;base64,{0}",base64);
+
+                        <div class="postbox">
+                            <img src="@image" width="100%" height="" alt="">
+                        </div>
+
+                    }
+
+                    <div class="postbox">
+                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
+                    </div>
+                    <div class="postbox">
+                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
+                    </div>
                     <div class="postbox">
                         <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
                     </div>
@@ -117,27 +145,6 @@
                     </div>
                     <div class="postbox">
                         <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
                     </div>
                 </div>
             </div>

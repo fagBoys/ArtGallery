@@ -70,7 +70,7 @@ namespace ArtGallery.Controllers
         {
 
             ArtGalleryContext context = new ArtGalleryContext();
-            IEnumerable<Post> posts= context.Post.Include(O => O.PostID).ToList();
+            IEnumerable<Post> posts= context.Post.ToList();
 
             //EF core end
 

@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace ArtGallery.Controllers
@@ -67,8 +68,13 @@ namespace ArtGallery.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            //Login action
-            return View();
+
+            ArtGalleryContext context = new ArtGalleryContext();
+            IEnumerable<Post> posts= context.Post.Include(O => O.PostID).ToList();
+
+            //EF core end
+
+            return View(posts);
         }
         [HttpGet]
         [AllowAnonymous]

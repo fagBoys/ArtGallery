@@ -69,3 +69,37 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+#hi {
+    color: pink;
+    background-color: black;
+}
+
+.MainPageLogin {
+    
+    clear: both;
+    border: 3px solid #dbd8cf;
+    margin: auto;
+    width: 60%;
+   
+    padding: 10px;
+}
+
+.back {
+    background-image: radial-gradient( #eee 0%, #fff 80%);
+    box-shadow: -44px 120px 80px -72px #fff inset, -44px -120px 80px -72px #fff inset;
+    height:100%;
+    width:100%;
+}
+.MyImage {
+    clear:both;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left:35%;
+    padding : 5PX;
+} 

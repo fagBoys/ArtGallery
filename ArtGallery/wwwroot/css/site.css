@@ -71,35 +71,82 @@ body {
 }
 
 
+
+/*
+    
+    Login Page Style :
+        
+            Start :
+
+*/
+
 #hi {
     color: pink;
     background-color: black;
 }
 
 .MainPageLogin {
-    
+    color: #626262;
     clear: both;
     border: 3px solid #dbd8cf;
+    border-radius: 20px;
+/*    border-color: rgba(277, 277, 277, 1);
+*/    background-color: white;
     margin: auto;
-    width: 60%;
-   
+    margin-top: 20%;
+    width: 40%;
     padding: 10px;
+    padding-bottom: 45px;
+    margin-bottom:150px;
 }
 
 .back {
-    background-image: radial-gradient( #eee 0%, #fff 80%);
-    box-shadow: -44px 120px 80px -72px #fff inset, -44px -120px 80px -72px #fff inset;
-    height:100%;
-    width:100%;
+    /*background-image: radial-gradient( #eee 0%, #fff 80%);
+    box-shadow: -44px 120px 80px -72px #fff inset, -44px -120px 80px -72px #fff inset;*/
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 .MyImage {
-    clear:both;
-    width: 100px;
-    height: 100px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-left:35%;
-    padding : 5PX;
-} 
+    /*center*/
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+#signButton {
+    /*color*/
+    background-color: #ff005a !important;
+    border: #ff005a;
+    /*center*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*size*/
+    width: 80%;
+   
+}
+
+#loginInputs {
+    /*center*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*size*/
+    width: 80%;
+    /*position*/
+    margin-bottom:25px;
+}
+
+/*
+    
+    Login Page Style : End Here
+        
+            
+
+*/

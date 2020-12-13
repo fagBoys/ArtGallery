@@ -5,35 +5,35 @@
 @{
 }
 <div class="back">
-    <h1>Login</h1>
+    
 
-    <h4>Art Gallery</h4>
-    <hr />
+    
+    
     <div class="row">
         <div class="col-md-4 , MainPageLogin">
+            <h4 style="float:none; text-align:center; margin:20px 0;">Art Gallery</h4>
             <img class="MyImage" src="~/img/user.png">
             <form asp-controller="User" asp-action="Login" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    
-                    <input asp-for="Username" class="form-control" />
+                <div class="form-group" id="loginInputs">
+
+                    <input asp-for="Username" class="form-control" placeholder="Username" />
                     <span asp-validation-for="Username" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <input asp-for="Password" class="form-control" />
+                <div class="form-group" id="loginInputs">
+                    <input asp-for="Password" class="form-control" placeholder="Password">
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                <div class="form-group" >
+                    <button type="submit" class="btn btn-primary" id="signButton">Sign in</button>
                 </div>
             </form>
-            <div>
-                <div><a asp-controller="User" asp-action="Register">Creat your account</a></div>
-                <div><a asp-controller="User" asp-action="Register">Forgot your password?</a></div>
+            <div style="text-align:center;margin-top:45px;margin-bottom:5px;">
+                <div><a asp-controller="User" asp-action="Register" style="color:#ff005a;">Create your account</a></div>
+                <div><a asp-controller="User" asp-action="Register" style="color:#ff005a;">Forgot your password?</a></div>
             </div>
 
 
         </div>
     </div>
 </div>
-@*<div id="hi" >hi gfse</div>*@

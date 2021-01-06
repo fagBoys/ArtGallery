@@ -954,3 +954,4 @@ D:\Program Files (x86)\GitHubFile\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\
 D:\Program Files (x86)\GitHubFile\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\ArtGallery.dll
 D:\Program Files (x86)\GitHubFile\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\ArtGallery.pdb
 D:\Program Files (x86)\GitHubFile\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\ArtGallery.genruntimeconfig.cache
+D:\Program Files (x86)\GitHubFile\ArtGallery\ArtGallery\obj\Debug\netcoreapp3.1\Razor\Views\User\Test.cshtml.g.cs

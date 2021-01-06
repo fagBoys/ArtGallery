@@ -143,7 +143,40 @@ body {
     margin-bottom:25px;
 }
 
+    #loginInputs :hover {
+        /*center*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /*size*/
+        /*position*/
+        margin-bottom: 25px;
+        border-color: red;
+        outline: none;
+        box-shadow: none;
+    }
+
+    #loginInputs :focus {
+        /*center*/
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /*size*/
+        /*position*/
+        margin-bottom: 25px;
+        border-color: red !important;
+        outline: none;
+        box-shadow: none;
+    }
+
+    
+
+
+
 /*
+
+
+
     
     Login Page Style : End Here
         

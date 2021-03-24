@@ -191,5 +191,17 @@ namespace ArtGallery.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult post(int id )
+        {
+
+            ArtGalleryContext context = new ArtGalleryContext();
+            Post post = new Post();
+            post = context.Post.Where(A => A.PostID == id).FirstOrDefault();
+
+            return View(post);
+        }
+
+
     }
 }

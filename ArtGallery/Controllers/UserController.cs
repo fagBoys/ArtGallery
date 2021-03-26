@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace ArtGallery.Controllers
@@ -187,12 +186,12 @@ namespace ArtGallery.Controllers
                 }
             }
             Context.Post.Add(NewPost);
-            Context.SaveChangesAsync();
+            Context.SaveChanges();
             return View();
         }
 
         [HttpGet]
-        public IActionResult post(int id )
+        public IActionResult Post(int id)
         {
 
             ArtGalleryContext context = new ArtGalleryContext();

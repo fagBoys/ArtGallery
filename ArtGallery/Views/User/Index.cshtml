@@ -117,35 +117,12 @@
                         var image = string.Format("data:image/jpg;base64,{0}",base64);
 
                         <div class="postbox">
-                            <img src="@image" width="100%" height="" alt="">
+                            <a asp-controller="User" asp-action="Post" asp-route-id="@item.PostID">
+                                <img src="@image" width="100%" height="" alt="">
+                            </a>
                         </div>
 
                     }
-
-                    <div class="postbox">
-                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p1.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p2.jpg" width="100%" height="" alt="">
-                    </div>
-                    <div class="postbox">
-                        <img src="~/img/Posts/p3.jpg" width="100%" height="" alt="">
-                    </div>
                 </div>
             </div>
 

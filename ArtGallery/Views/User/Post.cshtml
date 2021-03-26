@@ -1,0 +1,37 @@
+﻿@model ArtGallery.Models.Post
+
+@{
+    ViewData["Title"] = "Post";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1>Post</h1>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PostImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PostImage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Caption)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Caption)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PostID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

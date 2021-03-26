@@ -12,11 +12,10 @@ namespace ArtGallery.Models
         [Key]
         public int PostID { get; set; }
 
-        [Required]
         public Byte[] PostImage { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(1000)]
         public string Caption { get; set; }
 
         [Required]

@@ -163,3 +163,15 @@ body.body-style
   float: left;
   background-color: #e2dede;
 }
+
+
+/*#id*/
+/*.class*/
+/*Post Start*/
+.Post-SectionOne-Tags {
+    margin-right: 4px;
+    padding: 6px;
+    text-align: center;
+    background-color: silver;
+}
+/*Post End*/

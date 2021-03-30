@@ -4,8 +4,48 @@
     ViewData["Title"] = "Post";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
+<div class="MainPart container-fluid">
 
-<h1>Post</h1>
+    <section class="Post-sectionOne">
+        <div id="Post-sectionOneThumbImage"><img src="~/img/Posts/p1.jpg" alt="Alternate Text" /></div>
+        <div id="Post-sectionOneTitle"><h2>Title of the post</h2></div>
+        <div>01/01/2025</div>
+        <div>Author Name</div>
+        <div>
+            <div id="SectionOne-TagsSection" class="col-sm-6">
+                <div class="row row-cols-md-auto">
+                    <div class="col-auto Post-SectionOne-Tags">Tag01</div>
+                    <div class="col-auto Post-SectionOne-Tags">Tag02</div>
+                    <div class="col-auto Post-SectionOne-Tags">Tag03</div>
+                    <div class="col-auto Post-SectionOne-Tags">Tag04</div>
+                    <div class="col-auto Post-SectionOne-Tags">Tag05</div>
+                    <div class="col-auto Post-SectionOne-Tags">Tag06</div>
+
+                </div>
+            </div>
+
+        </div>
+        <div><p>text text text text text text text text text text text text text text </p></div>
+        <div id="Post-sectionOne-PostImage"><img src="~/img/Posts/p1.jpg" alt="Alternate Text" /></div>
+
+
+    </section>
+
+    <section class="Post-sectionTwo">
+        <br />
+        part 2
+        <div>paragraph</div>
+        <div>dokme ha</div>
+    </section>
+
+    
+       
+        
+        
+    
+
+</div>
+<!--<h1 id="ali">Post</h1>
 
 <div>
     <h4>Post</h4>
@@ -14,9 +54,10 @@
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.PostImage)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PostImage)
-        </dd>
+        <dd class="col-sm-10">
+            <img src="~/img/Posts/p3.jpg" />-->
+            @*@Html.DisplayFor(model => model.PostImage)*@
+        <!--</dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Caption)
         </dt>
@@ -24,9 +65,11 @@
             @Html.DisplayFor(model => model.Caption)
         </dd>
         <dt class = "col-sm-2">
+            Date01
             @Html.DisplayNameFor(model => model.Date)
         </dt>
         <dd class = "col-sm-10">
+            Date02
             @Html.DisplayFor(model => model.Date)
         </dd>
     </dl>
@@ -34,4 +77,4 @@
 <div>
     <a asp-action="Edit" asp-route-id="@Model.PostID">Edit</a> |
     <a asp-action="Index">Back to List</a>
-</div>
+</div>-->

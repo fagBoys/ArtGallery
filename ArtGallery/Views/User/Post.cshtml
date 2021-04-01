@@ -4,13 +4,24 @@
     ViewData["Title"] = "Post";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
+@*Start*@
 <div class="MainPart container-fluid">
 
-    <section class="Post-sectionOne">
-        <div id="Post-sectionOneThumbImage"><img src="~/img/Posts/p1.jpg" alt="Alternate Text" /></div>
-        <div id="Post-sectionOneTitle"><h2>Title of the post</h2></div>
-        <div>01/01/2025</div>
-        <div>Author Name</div>
+    <section class="Post-SectionOne">
+
+        <div id="Post-SectionOne-ThumbImage">
+        <img src="~/img/Posts/p1.jpg" alt="Alternate Text" class="img-thumbnail" />
+        </div>
+
+        <div id="Post-SectionOne-Title" >
+        <h2>Title of the post</h2>
+        <p>01/01/2025</p>
+        <p>Author Name</p>
+
+        </div>
+
+        <div></div>
+        <div></div>
         <div>
             <div id="SectionOne-TagsSection" class="col-sm-6">
                 <div class="row row-cols-md-auto">
@@ -26,12 +37,14 @@
 
         </div>
         <div><p>text text text text text text text text text text text text text text </p></div>
-        <div id="Post-sectionOne-PostImage"><img src="~/img/Posts/p1.jpg" alt="Alternate Text" /></div>
+        <div id="Post-SectionOne-PostImage" class="text-center">
+            <img src="~/img/Posts/p1.jpg" alt="Alternate Text" class="rounded" />
+        </div>
 
 
     </section>
 
-    <section class="Post-sectionTwo">
+    <section class="Post-SectionTwo">
         <br />
         part 2
         <div>paragraph</div>
@@ -45,6 +58,8 @@
     
 
 </div>
+@*End*@
+
 <!--<h1 id="ali">Post</h1>
 
 <div>
@@ -75,6 +90,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.PostID">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>-->

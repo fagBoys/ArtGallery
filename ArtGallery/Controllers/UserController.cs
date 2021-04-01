@@ -196,7 +196,7 @@ namespace ArtGallery.Controllers
 
             ArtGalleryContext context = new ArtGalleryContext();
             Post post = new Post();
-            post = context.Post.Where(A => A.PostID == id).FirstOrDefault();
+            post = context.Post.Where(A => A.PostId == id).FirstOrDefault();
 
             return View(post);
         }

@@ -174,4 +174,16 @@ body.body-style
     text-align: center;
     background-color: silver;
 }
+
+#Post-SectionOne-ThumbImage {
+    float: left;
+    margin-left: 0.4%;
+    margin-top: 1%;
+}
+#Post-SectionOne-Title{
+    float:left;
+    text-align:center;
+    margin-top:70px;
+    margin-left:40px;
+}
 /*Post End*/

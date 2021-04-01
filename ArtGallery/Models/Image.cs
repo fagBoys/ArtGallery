@@ -9,7 +9,7 @@ namespace ArtGallery.Models
     public class Image
     {
         [Key]
-        public int Imageid { get; set; }
+        public int ImageId { get; set; }
 
         [Required]
         [MaxLength(50)]
@@ -20,7 +20,7 @@ namespace ArtGallery.Models
         public string ImageAddress { get; set; }
 
       
-        public string Postid { get; set; }
+        public int PostId { get; set; }
 
     }
 }

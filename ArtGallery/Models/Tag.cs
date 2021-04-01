@@ -9,7 +9,7 @@ namespace ArtGallery.Models
     public class Tag
     {
         [Key]
-        public int Tagid { get; set; }
+        public int TagId { get; set; }
 
         [Required]
         [MaxLength(50)]

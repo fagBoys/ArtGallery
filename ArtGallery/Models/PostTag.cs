@@ -10,10 +10,10 @@ namespace ArtGallery.Models
     {
 
         [Key]
-        public int PostTagid { get; set; }
+        public int PostTagId { get; set; }
  
-        public int Postid { get; set; }
+        public int PostId { get; set; }
 
-        public int Tagid { get; set; }
+        public int TagId { get; set; }
     }
 }

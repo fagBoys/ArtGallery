@@ -10,7 +10,7 @@ namespace ArtGallery.Models
     public class Post
     {
         [Key]
-        public int PostID { get; set; }
+        public int PostId { get; set; }
 
         public Byte[] PostImage { get; set; }
 
@@ -21,5 +21,9 @@ namespace ArtGallery.Models
         [Required]
         [MaxLength(50)]
         public DateTime Date { get; set; }
+
+        public string AccountId { get; set; }
+
+        public Account Account { get; set; }
     }
 }

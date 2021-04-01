@@ -26,6 +26,7 @@ namespace ArtGallery.Models
 
         public bool AdminType { get; set; }
 
+        public ICollection<Post> Posts { get; set; }
 
     }
 }

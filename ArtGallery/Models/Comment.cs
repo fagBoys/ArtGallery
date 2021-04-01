@@ -9,15 +9,15 @@ namespace ArtGallery.Models
     public class Comment
     {
             [Key]
-            public int Commentid { get; set; }
+            public int CommentId { get; set; }
 
             [Required]
-            [MaxLength(50)]
-            public string  Text { get; set; }
+            [MaxLength(500)]
+            public string Text { get; set; }
          
-            public int    postid { get; set; }
+            public int PostId { get; set; }
 
-            public string  Userid { get; set; }
+            public string  UserId { get; set; }
 
             [Required]
             [MaxLength(50)]

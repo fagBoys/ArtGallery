@@ -5,18 +5,19 @@
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 @*Start*@
-<div class="MainPart container-fluid">
 
+@section Header
+{
     <section class="Post-SectionOne">
 
         <div id="Post-SectionOne-ThumbImage">
-        <img src="~/img/Posts/p1.jpg" alt="Alternate Text" class="img-thumbnail" />
+            <img src="~/img/Posts/p1.jpg" alt="Alternate Text" class="img-thumbnail" />
         </div>
 
-        <div id="Post-SectionOne-Title" >
-        <h2>Title of the post</h2>
-        <p>01/01/2025</p>
-        <p>Author Name</p>
+        <div id="Post-SectionOne-Title">
+            <h2>Title of the post</h2>
+            <p>01/01/2025</p>
+            <p>Author Name</p>
 
         </div>
 
@@ -43,19 +44,23 @@
 
 
     </section>
+}
+
+<div class="MainPart container-fluid">
 
     <section class="Post-SectionTwo">
         <br />
         part 2
         <div>paragraph</div>
         <div>dokme ha</div>
-    </section>
 
-    
-       
-        
-        
-    
+        <div>
+            <form asp-controller="User" asp-action="AddComment" asp-route-Message="Message">
+                <textarea style="width:100%; height:200px;" name="Message"></textarea>
+                <button type="submit">Comment</button>
+            </form>
+        </div>
+    </section>
 
 </div>
 @*End*@
@@ -71,8 +76,8 @@
         </dt>
         <dd class="col-sm-10">
             <img src="~/img/Posts/p3.jpg" />-->
-            @*@Html.DisplayFor(model => model.PostImage)*@
-        <!--</dd>
+@*@Html.DisplayFor(model => model.PostImage)*@
+<!--</dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Caption)
         </dt>

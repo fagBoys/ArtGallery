@@ -201,6 +201,10 @@ namespace ArtGallery.Controllers
             return View(post);
         }
 
+        public IActionResult AddComment(string Message)
+        {
+            return View();
+        }
 
     }
 }

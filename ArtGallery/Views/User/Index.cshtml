@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
+
 <body class="body-style">
 
     <nav class="sidebar-style">
@@ -110,11 +111,11 @@
                 </div>
 
                 <div class="" style="background-color: #ebebeb; width:100%; height:67vh; margin-top:1vh;">
-                    @foreach(var item in Model)
+                    @foreach (var item in Model)
                     {
 
                         var base64 = Convert.ToBase64String(item.PostImage);
-                        var image = string.Format("data:image/jpg;base64,{0}",base64);
+                        var image = string.Format("data:image/jpg;base64,{0}", base64);
 
                         <div class="postbox">
                             <a asp-controller="User" asp-action="Post" asp-route-id="@item.PostId">

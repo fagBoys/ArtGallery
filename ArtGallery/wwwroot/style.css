@@ -13,7 +13,6 @@ body.body-style
 .sidebar-style
 {
   width: 300px;
-  height: 100vh;
   background-color: #ff0036;
   float: left;
 
@@ -90,7 +89,7 @@ body.body-style
 
 .menu-style
 {
-  margin-top: 30vh  ;
+  margin-top: 5vh;
   margin-left: 25px;
 }
 
@@ -99,7 +98,7 @@ body.body-style
   margin: 0 auto;
   text-align: left !important;
   width: 250px !important;
-  height: 50px;
+  height: 6vh;
   background-color: #ff0036 !important;
   border: none !important;
   padding-left: 50px !important;
@@ -110,7 +109,7 @@ body.body-style
   margin: 0 auto;
   text-align: left !important;
   width: 250px !important;
-  height: 50px;
+  height: 6vh;
   background-color: #e00030 !important;
   border: none !important;
   padding-left: 50px;

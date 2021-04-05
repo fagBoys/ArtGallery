@@ -201,10 +201,19 @@ namespace ArtGallery.Controllers
             return View(post);
         }
 
-        public IActionResult AddComment(string Message)
+        public IActionResult AddComment(int idcomment, string idAccount, int idpost)
         {
+            ArtGalleryContext Context = new ArtGalleryContext();
+            Comment comment = new Comment();
+            comment.UserId = idAccount;
+            comment.PostId = idpost;
+
+            Context.Comment.Add(comment);
+            Context.SaveChanges();
             return View();
         }
+
+
 
     }
 }

@@ -25,6 +25,8 @@ namespace ArtGallery.Data
         public DbSet<Post> Post { get; set; }
 
         public DbSet<Following> Following { get; set; }
+        
+        public DbSet<Comment> Comment { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

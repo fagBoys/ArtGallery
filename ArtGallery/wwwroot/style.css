@@ -8,6 +8,7 @@ body.body-style
   font-family: CenturyGothic;
   padding: 0;
   margin: 0;
+
 }
 
 .sidebar-style
@@ -15,6 +16,7 @@ body.body-style
   width: 300px;
   background-color: #ff0036;
   float: left;
+  
 
 }
 
@@ -204,12 +206,27 @@ body.body-style
     margin-top: 10px !important;
 }
 #Post-SectionOne-Descriptions {
-    margin-top: 100px !important;
-    float: left;
+    clear: both;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: justify;
-    margin-left: 15px;
+    margin-left: 0px;
 }
 
+
+.Post-SectionOne{
+    height:auto;
+    padding-bottom:100px;
+}
+
+#Post-SectionOne-PostImage {
+    
+    width: auto;
+    height:auto;
+
+    margin-left: 95px;
+    margin-right: 95px;
+}
 /*#id*/
 /*.class*/
 

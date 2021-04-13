@@ -255,6 +255,23 @@ body.body-style
     background-color: blue;
     float:right;
 }
+
+.ProfilePic-style02 {
+    margin: auto;
+    margin-top: 25px;
+    background-color: #e2dede;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.Buttons-Style{
+ font-weight:bolder;
+ padding-right:120px;
+
+
+
+}
 /*#id*/
 /*.class*/
 

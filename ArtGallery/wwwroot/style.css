@@ -213,8 +213,8 @@ body.body-style
     margin-left: 0px;
 }
 
-
-.Post-SectionOne{
+.Post-SectionOne
+{
     height:auto;
     padding-bottom:100px;
 }
@@ -223,9 +223,37 @@ body.body-style
     
     width: auto;
     height:auto;
-
     margin-left: 95px;
     margin-right: 95px;
+}
+
+.Post-Comment-Box {
+
+    margin: 0 auto;
+    padding: 0px;
+    background-color: red;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+
+}
+
+.Post-Comment-Left
+{
+    width: 10%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: yellow;
+    float:left;
+}
+
+.Post-Comment-Right
+{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: blue;
+    float:right;
 }
 /*#id*/
 /*.class*/

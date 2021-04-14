@@ -231,46 +231,58 @@ body.body-style
 
     margin: 0 auto;
     padding: 0px;
-    background-color: red;
-    width: 100%;
+/*    background-color: red;
+*/    width: 100%;
     min-height: 200px;
     height: auto;
 
 }
 
-.Post-Comment-Left
-{
-    width: 10%;
+.Post-Comment-Left {
+    width: 100px;
     height: 100%;
     margin: 0 auto;
-    background-color: yellow;
-    float:left;
+    /*    background-color: yellow;
+*/ float: left;
 }
 
-.Post-Comment-Right
-{
-    width: 90%;
+.Post-Comment-Right {
+    width: calc(100% - 100px);
     height: 100%;
     margin: 0 auto;
-    background-color: blue;
-    float:right;
+    /*    background-color: blue;
+*/ float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
 }
 
 .ProfilePic-style02 {
+
     margin: auto;
     margin-top: 25px;
+    padding: 10px;
     background-color: #e2dede;
-    width: 100px;
-    height: 100px;
+  width:70px;
+    height:70px;
     border-radius: 50%;
 }
 
 .Buttons-Style{
+
  font-weight:bolder;
- padding-right:120px;
+ padding-right:50px;
 
+}
 
+.Post-Comment-Box-UserName
+{
+    margin-left: 10px;
+}
 
+.Post-Comment-Box-Text
+{
+    text-align:justify;
 }
 /*#id*/
 /*.class*/

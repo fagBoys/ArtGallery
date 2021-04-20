@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace ArtGallery.Models
 {
@@ -22,5 +23,9 @@ namespace ArtGallery.Models
             [Required]
             [MaxLength(50)]
             public string Confirmation { get; set; }
+
+            public ICollection<Comment> Comments { get; set; }
+
+            
     }
 }

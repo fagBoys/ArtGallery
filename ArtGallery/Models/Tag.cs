@@ -15,6 +15,8 @@ namespace ArtGallery.Models
         [MaxLength(50)]
         public string Name { get; set; }
 
+        public int PostTagId { get; set; }
+        public ICollection<PostTag> PostTags { get; set; }
 
     }
 }

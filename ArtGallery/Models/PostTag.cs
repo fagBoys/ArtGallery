@@ -15,5 +15,11 @@ namespace ArtGallery.Models
         public int PostId { get; set; }
 
         public int TagId { get; set; }
+
+        public Post Post { get; set; }
+
+        public  Tag  Tag{ get; set; }
+
+        public ICollection<Tag> Tags { get; set; }
     }
 }

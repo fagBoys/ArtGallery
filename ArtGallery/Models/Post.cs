@@ -25,5 +25,9 @@ namespace ArtGallery.Models
         public string AccountId { get; set; }
 
         public Account Account { get; set; }
+
+        public Comment Comment { get; set; }
+
+        public ICollection<PostTag> tags { get; set; }
     }
 }

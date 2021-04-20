@@ -1,4 +1,4 @@
-﻿@model ArtGallery.Models.Post
+﻿@model ArtGallery.ViewModels.PostViewModel
 
 @{
     ViewData["Title"] = "Post";
@@ -91,7 +91,7 @@
 
         <br />
         <div>
-            <form asp-controller="User" asp-action="AddComment" asp-route-Message="Message">
+            <form asp-controller="User" asp-action="AddComment" asp-route-Message="Message" asp-route-PostId="@Model.Post.PostId" asp-route-AccountId="@Model.Account.Id">
                 <textarea style="width:100%; height:200px;" name="Message"></textarea>
                 <button type="submit">Comment</button>
             </form>
@@ -100,36 +100,3 @@
 
 </div>
 @*End*@
-
-<!--<h1 id="ali">Post</h1>
-
-<div>
-    <h4>Post</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PostImage)
-        </dt>
-        <dd class="col-sm-10">
-            <img src="~/img/Posts/p3.jpg" />-->
-@*@Html.DisplayFor(model => model.PostImage)*@
-<!--</dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Caption)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Caption)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-        <dd class = "col-sm-10">
-            Date02
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>-->

@@ -10,8 +10,12 @@ namespace ArtGallery.ViewModels
     {
         public Post Post { get; set; }
 
+        public Account Account { get; set; }
+
+        public ICollection<Image> Images { get; set; }
+
         public ICollection<Comment> PostComments { get; set; }
 
-        public ICollection<Tag> Tags { get; set; }
+        public ICollection<PostTag> PostTags { get; set; }
     }
 }

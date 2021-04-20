@@ -195,18 +195,27 @@ namespace ArtGallery.Controllers
         {
 
             ArtGalleryContext context = new ArtGalleryContext();
-            Post post = new Post();
-            post = context.Post.Where(A => A.PostId == id).FirstOrDefault();
+            PostViewModel PostVM = new PostViewModel();
+            var post = context.Post.Where(A => A.PostId == id).FirstOrDefault();
+            var comments = context.Comment.Where(C => C.PostId == id).ToList();
+            var images = context.Image.Where(I => I.PostId == id).ToList();
+            var tags = context.PostTag.Where(T => T.PostId == id).ToList();
+            var account = context.Account.Where(A => A.Id == post.AccountId).FirstOrDefault();
 
-            return View(post);
+            PostVM.Post = post;
+            PostVM.PostComments = comments;
+            PostVM.Images = images;
+            PostVM.PostTags = tags;
+
+            return View(PostVM);
         }
 
-        public IActionResult AddComment(int idcomment, string idAccount, int idpost)
+        public IActionResult AddComment(string Message ,int CommentId, string AccountId, int PostId)
         {
             ArtGalleryContext Context = new ArtGalleryContext();
             Comment comment = new Comment();
-            comment.UserId = idAccount;
-            comment.PostId = idpost;
+            comment.UserId = AccountId;
+            comment.PostId = PostId;
 
             Context.Comment.Add(comment);
             Context.SaveChanges();

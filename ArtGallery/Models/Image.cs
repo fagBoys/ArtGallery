@@ -18,13 +18,10 @@ namespace ArtGallery.Models
         [Required]
         [MaxLength(50)]
         public string ImageAddress { get; set; }
-
       
         public int PostId { get; set; }
 
         public Post Post { get; set; }
-
-        public ICollection<Image> Images { get; set; }
 
     }
 }

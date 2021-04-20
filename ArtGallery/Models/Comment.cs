@@ -24,8 +24,9 @@ namespace ArtGallery.Models
             [MaxLength(50)]
             public string Confirmation { get; set; }
 
-            public ICollection<Comment> Comments { get; set; }
+            public Post Post { get; set; }
 
-            
+            public Account Account { get; set; }
+
     }
 }

@@ -20,6 +20,5 @@ namespace ArtGallery.Models
 
         public  Tag  Tag{ get; set; }
 
-        public ICollection<Tag> Tags { get; set; }
     }
 }

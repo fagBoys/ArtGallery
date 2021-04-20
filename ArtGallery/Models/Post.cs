@@ -26,8 +26,10 @@ namespace ArtGallery.Models
 
         public Account Account { get; set; }
 
-        public Comment Comment { get; set; }
+        public ICollection<Comment> Comments { get; set; }
 
-        public ICollection<PostTag> tags { get; set; }
+        public ICollection<PostTag> PostTags { get; set; }
+
+        public ICollection<Image> Images { get; set; }
     }
 }

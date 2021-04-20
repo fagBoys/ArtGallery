@@ -28,6 +28,12 @@ namespace ArtGallery.Data
         
         public DbSet<Comment> Comment { get; set; }
 
+        public DbSet<Image> Image { get; set; }
+
+        public DbSet<PostTag> PostTag { get; set; }
+
+        public DbSet<Tag> Tag { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=.;Database=ArtGalleryDB;Trusted_Connection=True;MultipleActiveResultSets=true");

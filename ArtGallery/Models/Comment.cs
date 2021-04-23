@@ -25,6 +25,12 @@ namespace ArtGallery.Models
             public string Confirmation { get; set; }
 
             public Post Post { get; set; }
+         
+        
+            [Required]
+            [MaxLength(50)]
+            public DateTime Date { get; set; }
+
 
             public Account Account { get; set; }
 

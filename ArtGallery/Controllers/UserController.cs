@@ -78,6 +78,7 @@ namespace ArtGallery.Controllers
 
             return View(posts);
         }
+
         [HttpGet]
         [AllowAnonymous]
         public IActionResult Register(string returnUrl = null)
@@ -85,7 +86,6 @@ namespace ArtGallery.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
-
 
         [HttpPost]
         [AllowAnonymous]
@@ -219,13 +219,14 @@ namespace ArtGallery.Controllers
         {
             ArtGalleryContext Context = new ArtGalleryContext();
             Comment comment = new Comment();
-            comment.UserId = AccountId;
             comment.PostId = PostId;
             comment.Date = DateTime.Now;
-            comment.Text = Message;           
+            comment.Text = Message;
+            comment.Confirmation = "true";
+            
             Context.Comment.Add(comment);
             Context.SaveChanges();
-            return View();
+            return RedirectToAction("Post");
         }
 
 

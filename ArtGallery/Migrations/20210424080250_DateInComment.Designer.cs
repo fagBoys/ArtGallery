@@ -4,14 +4,16 @@ using ArtGallery.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ArtGallery.Migrations
 {
     [DbContext(typeof(ArtGalleryContext))]
-    partial class ArtGalleryContextModelSnapshot : ModelSnapshot
+    [Migration("20210424080250_DateInComment")]
+    partial class DateInComment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

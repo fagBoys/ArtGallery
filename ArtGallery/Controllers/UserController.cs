@@ -13,6 +13,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+
+
 
 namespace ArtGallery.Controllers
 {
@@ -199,13 +202,14 @@ namespace ArtGallery.Controllers
             var post = context.Post.Where(A => A.PostId == id).FirstOrDefault();
             var comments = context.Comment.Where(C => C.PostId == id).ToList();
             var images = context.Image.Where(I => I.PostId == id).ToList();
-            var tags = context.PostTag.Where(T => T.PostId == id).ToList();
+            var tags = context.PostTag.Include(T => T.Tag).Where(PT => PT.PostId == id).ToList();
             var account = context.Account.Where(A => A.Id == post.AccountId).FirstOrDefault();
 
             PostVM.Post = post;
             PostVM.PostComments = comments;
             PostVM.Images = images;
-            PostVM.PostTags = tags;
+            PostVM.Tags = tags;
+            PostVM.Account = account;
 
             return View(PostVM);
         }

@@ -16,6 +16,6 @@ namespace ArtGallery.ViewModels
 
         public ICollection<Comment> PostComments { get; set; }
 
-        public ICollection<PostTag> PostTags { get; set; }
+        public ICollection<PostTag> Tags { get; set; }
     }
 }

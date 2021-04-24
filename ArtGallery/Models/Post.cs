@@ -14,6 +14,8 @@ namespace ArtGallery.Models
 
         public Byte[] PostImage { get; set; }
 
+        public string Title { get; set; }
+
         [Required]
         [MaxLength(1000)]
         public string Caption { get; set; }

@@ -9273,25 +9273,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Zack424\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\AM\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Zack424\\source\\repos\\New folder\\ArtGallery\\ArtGallery\\ArtGallery.csproj",
+      "projectUniqueName": "C:\\Users\\AM\\Documents\\GitHub\\ArtGallery\\ArtGallery\\ArtGallery.csproj",
       "projectName": "ArtGallery",
-      "projectPath": "C:\\Users\\Zack424\\source\\repos\\New folder\\ArtGallery\\ArtGallery\\ArtGallery.csproj",
-      "packagesPath": "C:\\Users\\Zack424\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Zack424\\source\\repos\\New folder\\ArtGallery\\ArtGallery\\obj\\",
+      "projectPath": "C:\\Users\\AM\\Documents\\GitHub\\ArtGallery\\ArtGallery\\ArtGallery.csproj",
+      "packagesPath": "C:\\Users\\AM\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AM\\Documents\\GitHub\\ArtGallery\\ArtGallery\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Zack424\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\AM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9371,6 +9366,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9379,7 +9380,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

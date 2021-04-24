@@ -214,13 +214,15 @@ namespace ArtGallery.Controllers
             return View(PostVM);
         }
 
-        public IActionResult AddComment(string Message ,int CommentId, string AccountId, int PostId)
+        [HttpPost]
+        public IActionResult AddComment(string Message, string AccountId, int PostId)
         {
             ArtGalleryContext Context = new ArtGalleryContext();
             Comment comment = new Comment();
             comment.UserId = AccountId;
             comment.PostId = PostId;
-
+            comment.Date = DateTime.Now;
+            comment.Text = Message;           
             Context.Comment.Add(comment);
             Context.SaveChanges();
             return View();
